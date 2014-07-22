@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="gameApp">
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+  <body x-ng-controller="ticController">
+    <div class="wrapper">
+      <h2> Tic Tac Toe </h2>
+
+      <div class="cells"
+        x-ng-repeat="b in board track by $index" 
+          x-ng-click="clicker($index)">
+            {{ b }}
+      </div>
+      <button type="width:102px; height: 16px;"x-ng-click="reset()">Let's play again</button>
+    </div>
+    
+
+
+  </body>
+  </html>
