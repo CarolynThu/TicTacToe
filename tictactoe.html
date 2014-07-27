@@ -3,19 +3,46 @@
 <head>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
   <script src="script.js"></script>
+  <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.17/firebase.js'></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>    
   <link rel="stylesheet" href="style.css" />
-  <link href='http://fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="animate.min.css">
 </head>
-  <body x-ng-controller="ticController">
+  <body x-ng-controller="ticController" ng-model= "board">
+
     <div class="wrapper">
-      <h2> Tic Tac Toe </h2>
+
+    <div ng-show="firstScreen" class="startScreen"> 
+
+      <img src="/Users/CarolynNguyen/Desktop/TicTacToe/greetings.gif">
+
+        <button ng-click="startGame()">Play!</button>
+
+    </div>
+
+      <h2> Tic-Tac-Toe </h2>
+    <div class="boardwrapper">
       <div class="cells"
           x-ng-repeat="b in board track by $index" 
-            x-ng-click="clicker($index)">
+            x-ng-click="clicker($index)"> 
               {{ b }}
       </div>
-      <button class="button" x-ng-click="reset()">Let's a play again</button>
+      <!-- <button class="button" x-ng-click="reset()">Play again</button> -->
     </div>
+  </div>
+  <div id="vanellope">
+    <img src="/Users/CarolynNguyen/Desktop/TicTacToe/wreck.png" alt="Vanellope" class="expand2">
+  </div>
+   <!--  <img src="/Users/CarolynNguyen/Desktop/TicTacToe/Fix-it-Felix.png" alt="Felix" class="expand3"> -->
+
+
+    <!-- <div class="player1" ng-show="player1"><img src="/Users/CarolynNguyen/Desktop/TicTacToe/Ralphmoving.gif"></div>
+    <div class="player2"ng-hide="player1"><img src="/Users/CarolynNguyen/Desktop/TicTacToe/vanellope.gif"></div> -->
+<!-- 
+    <img src="/Users/CarolynNguyen/Desktop/TicTacToe/gene.gif" alt="Gene" class="expand"> -->
+  
+
     <div class="result" ng-bind="resultOne"></div>
     
     

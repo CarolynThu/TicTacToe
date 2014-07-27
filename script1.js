@@ -1,33 +1,21 @@
-var gameApp = angular.module('gameApp',["firebase"]);
+var gameApp = angular.module('gameApp',[]);
  
 
-gameApp.controller("ticController", function($scope, $firebase){
-var TTTRef = new Firebase("https://tictactoetime.firebaseio.com") ;
-
-$scope.clickCounter = $firebase(new Firebase("https://tictactoetime.firebaseio.com"));
-
-$scope.remoteCellList = 
-  $firebase(new Firebase("https://tictactoetime.firebaseio.com" + '/remoteboard')) ;
+gameApp.controller("ticController", function($scope){
 
 var board;
 var checkWin;
 var reset;
 var endGame = false;
+// var result;
 
-
-$scope.player1 = true;
 $scope.resultOne = ' ';
+
+
 
 $scope.board = [" "," "," "," "," "," "," "," "," "];
 $scope.result = true;
 $scope.clicked = 0
-
-$scope.firstScreen = true;
-
-$scope.remoteCellList.$bind($scope, "board");
-$scope.$watch('board', function() {
-    console.log('Model changed!') ;
-  }) ;
  
 $scope.clicker = function(b) {
 
@@ -36,11 +24,9 @@ $scope.clicker = function(b) {
 		// console.log($scope.clicked);
   		if ($scope.clicked % 2 == 0) { 
   			$scope.board[b] = 'O';
-  			$scope.player1 = true;
 		} 
 		else {
 			$scope.board[b] = 'X';
-			$scope.player1 = false;
 		} 
 	};
 	
@@ -49,14 +35,14 @@ $scope.clicker = function(b) {
 
 $scope.reset = function(b){
 	location.reload(true);
+// 		// $scope.game.board = $scope.initial;		
+// 		$scope.board = [" "," "," "," "," "," "," "," "," "];
+// 		$scope.clicked = 0;
+// 		$scope.gameWin = false;
+
 		
 
 };
-
-$scope.startGame = function () {
-	$scope.firstScreen = false;
-
-}
 
 var checkWin = function() {
 	if ($scope.board[0] == $scope.board[1] && 
