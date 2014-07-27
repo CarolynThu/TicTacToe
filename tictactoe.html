@@ -10,8 +10,9 @@
   <link rel="stylesheet" href="animate.min.css">
 </head>
   <body x-ng-controller="ticController" ng-model= "board">
+    <div class="layout" id="building"></div>
 
-    <div class="wrapper">
+    <div class="wrapper layout">
 
     <div ng-show="firstScreen" class="startScreen"> 
 
@@ -31,7 +32,7 @@
       <!-- <button class="button" x-ng-click="reset()">Play again</button> -->
     </div>
   </div>
-  <div id="vanellope">
+  <div class="layout" id="vanellope">
     <img src="/Users/CarolynNguyen/Desktop/TicTacToe/wreck.png" alt="Vanellope" class="expand2">
   </div>
    <!--  <img src="/Users/CarolynNguyen/Desktop/TicTacToe/Fix-it-Felix.png" alt="Felix" class="expand3"> -->
@@ -39,8 +40,8 @@
 
     <!-- <div class="player1" ng-show="player1"><img src="/Users/CarolynNguyen/Desktop/TicTacToe/Ralphmoving.gif"></div>
     <div class="player2"ng-hide="player1"><img src="/Users/CarolynNguyen/Desktop/TicTacToe/vanellope.gif"></div> -->
-<!-- 
-    <img src="/Users/CarolynNguyen/Desktop/TicTacToe/gene.gif" alt="Gene" class="expand"> -->
+
+    <img src="/Users/CarolynNguyen/Desktop/TicTacToe/gene.gif" alt="Gene" class="expand">
   
 
     <div class="result" ng-bind="resultOne"></div>

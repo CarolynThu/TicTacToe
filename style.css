@@ -1,12 +1,15 @@
 
 body {
-  background-image: url("/Users/CarolynNguyen/Desktop/TicTacToe/building.png");
- /* background-size: cover;*/
+  
+}
+#building {
+  background-image: url("/Users/CarolynNguyen/Desktop/TicTacToe/building2.0.png");
  background-repeat: no-repeat;
- background-color: black;
+ background-color: white;
  position: absolute;
- left: 650px;
-
+ height: 675px;
+ width: 600px;
+ background-size: contain;
 }
 h2 {
 	text-align: center;
@@ -15,18 +18,20 @@ h2 {
   background: -webkit-linear-gradient(#C02D2D, #333);
   	-webkit-background-clip: text;
   	-webkit-text-fill-color: transparent;
+  position: relative;
+  left: 314px;
 
 }
 
 .startScreen {
   height: 900px;
-  width: 1443px;
-  background-color: black;
+  width: 1323px;
+  background-color: white;
   position: absolute;
   margin: 0 auto;
   text-align: center;
   z-index: 100;
-  left: -5px;
+  left: 3px;
   top: 4px;
 
 }
@@ -43,14 +48,14 @@ img.expand2 {
   width: 500px;
   margin: -120px;
   position: fixed;
-  left: 335px;
-  top: 130px;
+  left: 453px;
+  top: 151px;
 }
 img.expand { 
- width: 5.5em;
+ width: -6.5em;
  position: fixed;
- top: 31px;
- left: 274px;
+ top: -14px;
+ left: 138px;
 }
 
 .wrapper {  
@@ -60,7 +65,7 @@ img.expand {
 .cells {
 	width: 155px;
 	height: 106px;
-	background-color: #FFFFFF ;
+	background-color: #720909 ;
 	margin: 5px;
 	float:left;
 	border-radius: 25px 10px / 10px 25px;
@@ -69,6 +74,8 @@ img.expand {
 	outline: 5px;
   opacity: 0.7;
   font-family: 'Press Start 2P', cursive;
+  position: relative;
+  left: 322px;
 
 }
 .cells:hover {
