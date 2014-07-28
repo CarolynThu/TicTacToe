@@ -11,6 +11,7 @@ body {
  width: 600px;
  background-size: contain;
 }
+
 h2 {
 	text-align: center;
 	font-family: 'Press Start 2P', cursive;
@@ -34,15 +35,20 @@ h2 {
   left: 3px;
   top: 4px;
 
+
 }
-img.expand3 {
+.startScreen img {
+  width: 1440px;
+  height: 600px;
+}
+/*img.expand3 {
   height: 209px;
   width: 170px;
   margin: -120px;
   position: fixed;
   left: 368px;
   top: 623px;
-}
+}*/
 img.expand2 {
   height: 644px;
   width: 500px;
@@ -53,9 +59,9 @@ img.expand2 {
 }
 img.expand { 
  width: -6.5em;
- position: fixed;
- top: -14px;
- left: 138px;
+ position: relative;
+ top: 192px;
+ left: -822px;
 }
 
 .wrapper {  
@@ -64,7 +70,7 @@ img.expand {
 }
 .cells {
 	width: 155px;
-	height: 106px;
+	height: 92px;
 	background-color: #720909 ;
 	margin: 5px;
 	float:left;
@@ -89,10 +95,18 @@ img.expand {
 }*/
 
 .result	{
+  font-family: 'Press Start 2P', cursive;
 	height:200px;
-	width:50%;
-	margin:0 auto;
+	/*width:50%;*/
+	/*margin:0 auto;*/
 	font-size: 50px;
+  z-index: 9999;
+  color: black;
+  position: absolute;
+  left: 1020px;
+  top: 562px;
+   -webkit-animation-name: bounceInDown 3s ease-in;
+   animation: bounceInDown 3s ease-in;
 }
 
 .button {
@@ -117,6 +131,24 @@ img.expand {
   top: 5px;
   left: 5px;
 }
+
+.wobble-to-bottom-right {
+  display: inline-block;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.wobble-to-bottom-right:hover, .wobble-to-bottom-right:focus, .wobble-to-bottom-right:active {
+  -webkit-animation-name: wobble-to-bottom-right;
+  animation-name: wobble-to-bottom-right;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
 
 
 

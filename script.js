@@ -43,13 +43,13 @@ $scope.clicker = function(b) {
 			$scope.player1 = false;
 		} 
 	};
-	
+
 	checkWin();
 };
 
 $scope.reset = function(b){
 	location.reload(true);
-		
+
 
 };
 
@@ -110,12 +110,10 @@ var checkWin = function() {
 		endGame = true;
 		$scope.resultOne = 'Winner!';
 	}	
-	if ($scope.clicked === 9 && !$scope.checkWin) {
+	if ($scope.clicked === 9 && endGame===false) {
 		$scope.resultOne = "It's a Tie";
 	}
 };
 
 
 }); // end of controller
-
-

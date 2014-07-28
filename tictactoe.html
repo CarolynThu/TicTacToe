@@ -5,9 +5,11 @@
   <script src="script.js"></script>
   <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.17/firebase.js'></script>
     <script src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>    
+  <link rel="stylesheet" href="animate.css">
+  <link rel="stylesheet" href="hoover.css">
   <link rel="stylesheet" href="style.css" />
   <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="animate.min.css">
+  
 </head>
   <body x-ng-controller="ticController" ng-model= "board">
     <div class="layout" id="building"></div>
@@ -18,13 +20,13 @@
 
       <img src="/Users/CarolynNguyen/Desktop/TicTacToe/greetings.gif">
 
-        <button ng-click="startGame()">Play!</button>
+        <button ng-click="startGame()">Press Start!</button>
 
     </div>
 
       <h2> Tic-Tac-Toe </h2>
     <div class="boardwrapper">
-      <div class="cells"
+      <div class="cells wobble-to-bottom-right"
           x-ng-repeat="b in board track by $index" 
             x-ng-click="clicker($index)"> 
               {{ b }}
@@ -38,14 +40,12 @@
    <!--  <img src="/Users/CarolynNguyen/Desktop/TicTacToe/Fix-it-Felix.png" alt="Felix" class="expand3"> -->
 
 
-    <!-- <div class="player1" ng-show="player1"><img src="/Users/CarolynNguyen/Desktop/TicTacToe/Ralphmoving.gif"></div>
+<!--     <div class="player1" ng-show="player1"><img src="/Users/CarolynNguyen/Desktop/TicTacToe/Ralphmoving.gif"></div>
     <div class="player2"ng-hide="player1"><img src="/Users/CarolynNguyen/Desktop/TicTacToe/vanellope.gif"></div> -->
 
     <img src="/Users/CarolynNguyen/Desktop/TicTacToe/gene.gif" alt="Gene" class="expand">
   
-
     <div class="result" ng-bind="resultOne"></div>
-    
     
   </body>
   </html>    
