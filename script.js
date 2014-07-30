@@ -48,9 +48,11 @@ $scope.clicker = function(b) {
 };
 
 $scope.reset = function(b){
-	location.reload(true);
-
-
+	// location.reload(true);
+	$scope.board = [" "," "," "," "," "," "," "," "," "];
+	 endGame = false;
+	 $scope.clicked = 0;
+	 $scope.resultOne = ' ';
 };
 
 $scope.startGame = function () {
@@ -111,7 +113,7 @@ var checkWin = function() {
 		$scope.resultOne = 'Winner!';
 	}	
 	if ($scope.clicked === 9 && endGame===false) {
-		$scope.resultOne = "It's a Tie";
+		$scope.resultOne = "A Tie!";
 	}
 };
 

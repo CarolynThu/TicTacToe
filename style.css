@@ -60,8 +60,8 @@ img.expand2 {
 img.expand { 
  width: -6.5em;
  position: relative;
- top: 192px;
- left: -822px;
+ top: 173px;
+ left: -817px;
 }
 
 .wrapper {  
@@ -110,9 +110,9 @@ img.expand {
 }
 
 .button {
-  color: #4f9d1c;
-  font-family: 'Chewy', cursive;
-  font-size: 21px;
+  color: #DA150C;
+  font-family: 'Press Start 2P', cursive;
+  font-size: -36px;
   text-decoration: none;
   text-shadow: -1px -1px 1px #616161;
   position: relative;
@@ -122,15 +122,17 @@ img.expand {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   margin: -147%;
-  border-radius: 76%;
-/* add sounds*/
+  border-radius: 100%;
+  right: -1020px;
+  bottom: 5px;
+
 }
-.button:hover {
+/*.button:hover {
   -webkit-box-shadow: 0px 0px 0 #666;
   -moz-box-shadow: 0px 0px 0 #666;
   top: 5px;
   left: 5px;
-}
+}*/
 
 .wobble-to-bottom-right {
   display: inline-block;
